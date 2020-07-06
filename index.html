@@ -98,21 +98,26 @@
 
 	var somme = 0;
 	var moyenne = 0;
-	var nombre_etudiant = etudiants.length;
+	var nombre_etudiant = 0;
+
+	var bon_eleve = etudiants[0];
+
+	// var note_max = etudiants[0].note;
+	// var etudiant_top = etudiants[0].nom;
 
 	for(var i=0; i< etudiants.length; i++){
-		somme = somme + etudiants[i].note;		
+		somme = somme + etudiants[i].note;
+		nombre_etudiant = i+1;
+
+		if(etudiants[i].note > bon_eleve.note){
+			bon_eleve = etudiants[i];
+			// note_max = etudiants[i].note ;
+			// etudiant_top = etudiants[i].nom;
+		}
 	}
-
-	moyenne = somme / nombre_etudiant;
-
+	moyenne = somme/ nombre_etudiant;
 	console.log("la moyenne de la classe est "+ moyenne);
-
-
-
-	// var etudiants = [13, 16, 10, 19];
-
-	console.log("la note = "+etudiants[1].note)
+	console.log(bon_eleve.nom + " a la plus grande moyenne qui est ", +bon_eleve.note);
 
 	</script>
 </head>
