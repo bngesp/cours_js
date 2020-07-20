@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fonction</title>
+    <script>
+        // function nom_fonction(arg){
+        // implementation
+        // }
+        // nom_fonction(arg);
+
+        // var etudiant = ["Aicha", "khadija", "lamine", "ousmane", "Pouye"];
+
+        // // definition de la fonction
+        // function afficherPrenom(uneVariable){
+        //     for(var index=0; index<uneVariable.length; index++)
+        //         console.log(uneVariable[index]);
+        // }
+
+        // // execution
+        // afficherPrenom(etudiant);
+
+        // estPremier(nombre) => true; false
+
+        function verifPremier(nombre){
+            var estPremier = true;
+
+            for(var i=2; i<=nombre-1; i++){
+                if(nombre % i == 0){
+                    console.log("le nombre "+nombre+" n'est pas premier car il est divisible par "+i);
+                    estPremier = false;
+                    break;
+                }
+            }
+
+            return estPremier;
+        }
+        
+        // if(estPremier)
+        //     console.log("le nombre "+nombre+" est premier");
+    
+        function add(x, y){
+            return x+y;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
