@@ -22,26 +22,57 @@
 
         // estPremier(nombre) => true; false
 
-        function verifPremier(nombre){
-            var estPremier = true;
+        // function verifPremier(nombre){
+        //     var estPremier = true;
 
-            for(var i=2; i<=nombre-1; i++){
-                if(nombre % i == 0){
-                    console.log("le nombre "+nombre+" n'est pas premier car il est divisible par "+i);
-                    estPremier = false;
-                    break;
-                }
-            }
+        //     for(var i=2; i<=nombre-1; i++){
+        //         if(nombre % i == 0){
+        //             console.log("le nombre "+nombre+" n'est pas premier car il est divisible par "+i);
+        //             estPremier = false;
+        //             break;
+        //         }
+        //     }
 
-            return estPremier;
-        }
+        //     return estPremier;
+        // }
         
-        // if(estPremier)
-        //     console.log("le nombre "+nombre+" est premier");
+        // // if(estPremier)
+        // //     console.log("le nombre "+nombre+" est premier");
     
-        function add(x, y){
-            return x+y;
+        // function add(x, y){
+        //     return x+y;
+        // }
+
+        // function multiplication(x, y){
+        //     return x*y;
+        // }
+
+        // var result = multiplication(4, 5);
+        // console.log(result);
+
+
+        var etudiant = {
+            nom: "diouf",
+            prenom: "samba",
+            notes: [10, 12, 15, 16]
         }
+
+        function calculeMoyenne(notes){
+            var moyenne = 0;
+            for(var i=0; i<notes.length; i++)
+                moyenne += notes[i] / notes.length;
+            
+            return moyenne;
+        }
+
+        var result = calculeMoyenne(etudiant.notes);
+
+        // calcule de la moyenne
+        // var moyenne = 0;
+        // for(var i=0; i<etudiant.notes.length; i++){
+        //     moyenne += etudiant.notes[i]/etudiant.notes.length;
+        // }
+        console.log("la moyenne de l'etudiant "+etudiant.nom+" "+etudiant.prenom+" est "+result);
     </script>
 </head>
 <body>

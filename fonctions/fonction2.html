@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fonction 2</title>
+    <script>
+    	// function nom_fonction(arg){
+        // implementation
+        // }
+        // demo();
+
+		
+        // var demo = function() {
+        // 	console.log("demo");
+        // }
+        // demo();
+
+        // var etudiant = {
+        //     nom: "diouf",
+        //     prenom: "samba",
+        //     notes: [10, 12, 15, 16],
+        //     classe: function (){ // methodes
+        //     	console.log("classe L2TR ESTM");
+        //     }
+        // }
+
+        // etudiant.classe();
+
+        // var moyenne = function (notes){
+        // 	var moyenne = 0;
+        //     for(var i=0; i<notes.length; i++)
+        //         moyenne += notes[i] / notes.length;
+        //     return moyenne;
+        // }
+
+        // console.log(moyenne(etudiant.notes));
+
+
+        // creer une fonction 
+        // wordCounter(text) => le nombre de mot
+
+        var wordCounter = function(text){
+        	var nbMot;
+        	// bonjour je suis un etudiant 
+        	var mots = text.split(' ');
+        	nbMot = mots.length;
+
+        	return nbMot;
+        }
+
+	var page = "Paramètre optionnel. Un entier définissant la limite sur le nombre de sous-chaînes à retourner. La méthode split scindera toujours la chaîne à partir du séparateur, mais le tableau retourné contiendra au plus qtéMax sous-chaînes."
+        console.log(wordCounter(page));
+
+        // creer une fonction 
+        // wordFrequency(text) => tableau contenant les mots et leurs frequences
+       	
+       	// bonjour je suis un etudiant de la classe TL2 de thies
+       	 // bonjour =>1
+       	 // je => 1 
+       	 // suis => 1
+       	 // ... 
+       	 // de => 2
+
+       	// mots => contient tous les mots
+       	// cpt => la frequence des mots
+
+       	var wordFrequency = function(text){
+       		var mots = text.toLowerCase().split(' ');
+       		var compteur = {};
+       		for(var i=0; i<mots.length; i++)
+       		{
+       			var mot = mots[i];
+       			if(compteur[mot] == undefined )
+       				compteur[mot] = 1;
+       			else 
+       				compteur[mot]++;
+       		}
+
+       		return compteur;
+       	}
+
+       	var text = "L'exemple suivant définit une fonction qui divise une chaîne en un tableau de chaînes selon un délimiteur spécifié. Après la coupe de la chaîne, la fonction affiche des messages indiquant la chaîne initiale (avant la coupe), le délimiteur utilisé, le nombre d'éléments dans le tableau, et les éléments du tableau retourné."
+       	console.log(wordFrequency(text));
+
+
+       	var samba = {
+            nom: "diouf",
+            prenom: "samba",
+            notes: [18, 5, 15, 8]
+        }
+
+        var pathe = {
+            nom: "diop",
+            prenom: "pathe",
+            notes: [9, 12, 17, 16]
+        }
+
+        // creer une bestStudent(etudian1, etudian2) => le meilleur etudiant
+        var moyenne = function(notes){
+        	var moyenne = 0;
+            for(var i=0; i<notes.length; i++)
+                moyenne += notes[i] / notes.length;
+            return moyenne;
+        }
+
+        var bestStudent = function(etudiant1, etudiant2){
+        	// var moyenne_etudiant1 = moyenne(etudiant1);
+        	// var moyenne_etudiant2 = moyenne(etudiant2);
+        	 if(moyenne(etudiant1) > moyenne(etudiant2))
+        	 		return etudiant1;
+        	 	else
+        	 		return etudiant2;
+        }
+
+        console.log(" Le best etudiant est "+ bestStudent(samba, pathe).prenom);
+
+
+    </script>
+
+</head>
+<body>
+	
+</body>
+</html>
