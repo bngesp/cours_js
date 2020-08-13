@@ -12,8 +12,31 @@ DOM : 3 niveaux
 
 Document : 
     Node (Noeud)
+        Elements(balises HTML)
+        textes(NodeText)
 
 3 trois methodes de recuperation de contenu
-1) document.getElementById() => un seul elmeent en retour
-2) getElementsByName, getElementsByClassName, getElementsByTagName => un tableau d'elements
-3) querySelector
+1) document.getElementById() => un seul elmeent en retour  ou undefined
+2) document.getElementsByName, document.getElementsByClassName, document.getElementsByTagName => un tableau d'elements
+3) document.querySelector('#text')
+<!-- 
+ <p id="test">
+     <div class="text2"><span class="text3"></span></div>
+ </p> -->
+
+
+ToDo :
+Creer un formulaire 
+nom, prenom, email, telephone, login et mot de passe
+regles de control :
+1) nom et prenom ne doivent pas etre vide
+2) email doit etre qqq@qqq.qq
+3) login doit avoir au minimum 4 caracteres
+4) telephone doit avoir au moins 9 chiffres;
+5) le mot de pas doit avoir des Lettre(min et maj) + chiffres
+
+
+
+
+Evenements
+1) On + nom Evenements
