@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyenne</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="php"> Note Php</label>
+            <input type="text" class="php" id="php" onkeyup="controlSaisieNote('php')">
+        </div>
+        <div>
+            <label for="uml"> Note UML</label>
+            <input type="text" class="uml" id="uml" onkeyup="controlSaisieNote('uml')">
+        </div>
+        <div>
+            <label for="java"> Note JAVA</label>
+            <input type="text" class="java" id="java" onkeyup="controlSaisieNote('java')">
+        </div>
+        <div>
+            <label for="sql"> Note SQL</label>
+            <input type="text" class="sql" id="sql" onkeyup="controlSaisieNote('sql');" onkeydown="calculMoyenne()">
+        </div>
+     </div>
+    <div class="moyenne">Votre moyenne : <span id="moyen"></span></div>
+    <script src="js/moyenne.js"></script>
+</body>
+</html>
